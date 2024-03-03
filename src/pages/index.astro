@@ -3,6 +3,10 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Blog1 from '../components/ArticulosPrincipales/Blog1.astro' 
+import Blog2 from '../components/ArticulosPrincipales/Blog2.astro' 
+import Blog3 from '../components/ArticulosPrincipales/Blog3.astro' 
+import Blog4 from '../components/ArticulosPrincipales/Blog4.astro' 
 ---
 
 <!doctype html>
@@ -13,9 +17,43 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1 class="text-center text-5xl">Ideas de Regalos para Todas las Ocasiones</h1>
+			<h1 class="text-center text-5xl">Ideas de regalos para todas las ocasiones</h1>
 			<h2 class="text-center text-2xl">Descubre Regalos Únicos y Originales para Pareja, Hijos, Amigos y Familiares</h2>
-			<p>Esto es una prueba</p>
+
+			
+
+			<div class="grid grid-cols-3 gap-5 mt-10">
+
+					<Blog1 
+					title="hola"
+					image="../corset-negro-1.jpg"
+					description='descripcion'
+					href='/blog/using-mdx/'
+					/>
+					
+
+					<Blog2 
+					title="hola"
+					image="../corset-negro-1.jpg"
+					description='descripcion'
+					href='/blog/using-mdx/'
+					/>
+
+					<Blog3 
+					title="hola"
+					image="../corset-negro-1.jpg"
+					description='descripcion'
+					href='/blog/using-mdx/'
+					/>
+
+					<Blog4 
+					title="hola"
+					image="../corset-negro-1.jpg"
+					description='descripcion'
+					href='/blog/using-mdx/'
+					/>
+
+			</div>
 
 		</main>
 		<Footer />

@@ -1,6 +1,5 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-
 ---
 
 <header class="bg-white">
@@ -52,7 +51,9 @@ import HeaderLink from './HeaderLink.astro';
 					  Guías
 					</HeaderLink>
 				
-					<button class="h-full p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700">
+					<button 
+						id="menu-button2"
+						class="h-full p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700">
 					  <span class="sr-only">Menu</span>
 					  <svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -69,6 +70,7 @@ import HeaderLink from './HeaderLink.astro';
 					</button>
 				
 				  <div
+					id="menu-open2"
 					class="hidden absolute end-0 z-10 w-56 rounded-md border border-gray-100 bg-white shadow-lg"
 					role="menu"
 				  >
@@ -78,7 +80,7 @@ import HeaderLink from './HeaderLink.astro';
 						class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
 						role="menuitem"
 					  >
-						View on Storefront
+						Guía 1
 					  </a>
 				
 					  <a
@@ -86,7 +88,7 @@ import HeaderLink from './HeaderLink.astro';
 						class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
 						role="menuitem"
 					  >
-						View Warehouse Info
+					  	Guía 2
 					  </a>
 				
 					  <a
@@ -94,7 +96,7 @@ import HeaderLink from './HeaderLink.astro';
 						class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
 						role="menuitem"
 					  >
-						Duplicate Product
+					  	Guía 3
 					  </a>
 				
 					  <a
@@ -102,7 +104,7 @@ import HeaderLink from './HeaderLink.astro';
 						class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
 						role="menuitem"
 					  >
-						Unpublish Product
+					  	Guía 4
 					  </a>
 				
 					</div>
@@ -118,7 +120,9 @@ import HeaderLink from './HeaderLink.astro';
 						Consejos
 					  </HeaderLink>
 				  
-					  <button class="h-full p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700">
+					  <button 
+					  		id="menu-button1"
+					  		class="h-full p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700">
 						<span class="sr-only">Menu</span>
 						<svg
 						  xmlns="http://www.w3.org/2000/svg"
@@ -133,8 +137,10 @@ import HeaderLink from './HeaderLink.astro';
 						  />
 						</svg>
 					  </button>
-				  
+				   
 					<div
+						id="menu-open1"
+					 	
 					  class="hidden absolute end-0 z-10 w-56 rounded-md border border-gray-100 bg-white shadow-lg"
 					  role="menu"
 					>
@@ -144,7 +150,7 @@ import HeaderLink from './HeaderLink.astro';
 						  class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
 						  role="menuitem"
 						>
-						  View on Storefront
+						  Consejo 1
 						</a>
 				  
 						<a
@@ -152,7 +158,7 @@ import HeaderLink from './HeaderLink.astro';
 						  class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
 						  role="menuitem"
 						>
-						  View Warehouse Info
+						Consejo 2
 						</a>
 				  
 						<a
@@ -160,7 +166,7 @@ import HeaderLink from './HeaderLink.astro';
 						  class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
 						  role="menuitem"
 						>
-						  Duplicate Product
+						Consejo 3
 						</a>
 				  
 						<a
@@ -168,10 +174,10 @@ import HeaderLink from './HeaderLink.astro';
 						  class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
 						  role="menuitem"
 						>
-						  Unpublish Product
+						Consejo 4
 						</a>
 				  
-					  </div>
+						</div>
 					</div>
 				</li>
 
@@ -191,6 +197,7 @@ import HeaderLink from './HeaderLink.astro';
 		<div class="flex items-center gap-4">
 	
 			<button
+			id="menu-button3"
 			class="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
 			>
 			<span class="sr-only">Toggle menu</span>
@@ -205,6 +212,11 @@ import HeaderLink from './HeaderLink.astro';
 				<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
 			</svg>
 			</button>
+				<div id="menu-open3">
+						<div class="grid h-full justify-between border-e">
+							
+						</div>
+				</div>
 		</div>
 		</div>
 	  </div>
@@ -247,3 +259,33 @@ import HeaderLink from './HeaderLink.astro';
 		}
 	}
 </style>
+<script>
+	const button1 = document.querySelector('#menu-button1') as Element;
+	const menuOpen1 = document.querySelector("#menu-open1") as Element;
+
+	button1.addEventListener("click", () => {
+		menuOpen1.classList.toggle("hidden");
+	})
+
+	const button2 = document.querySelector('#menu-button2') as Element;
+	const menuOpen2 = document.querySelector("#menu-open2") as Element;
+
+	button2.addEventListener("click", () => {
+		menuOpen2.classList.toggle("hidden");
+	})
+
+	const buttonMenu = document.querySelector('#menu-button3') as Element;
+	const menuOpenToggle = document.querySelector("#menu-open3") as Element;
+
+	buttonMenu.addEventListener("click", () => {
+		menuOpenToggle.classList.toggle("hidden");
+	})
+
+
+
+
+
+
+</script>
+
+

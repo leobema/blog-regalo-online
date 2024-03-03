@@ -3,7 +3,7 @@ import HeaderLink from './HeaderLink.astro';
 ---
 
 <header class="bg-white">
-	<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+	<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 ">
 	  <div class="flex h-16 items-center justify-between">
 		<div class="md:flex md:items-center md:gap-12">
 		  <a class="block text-teal-600" href="/">
@@ -37,187 +37,199 @@ import HeaderLink from './HeaderLink.astro';
 				</svg>
 		  </a>
 		</div>
+		<div >
+		<nav class="bg-white border-gray-200 dark:bg-gray-900">
+			<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+			  <button 
+			  		data-collapse-toggle="navbar-default" type="button"
+			  		id="menu-button3"
+			  	    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+				  <span class="sr-only">Open main menu</span>
+				  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+					  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+				  </svg>
+			  </button>
+			  <div 
+			  	 id="menu-open3"
+			 	 class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right md:mt-20 -inset-y-20  md:block md:w-auto">
+				<ul class="font-medium mt-20 flex flex-col p-4 md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+				  <li>
+					<a href="#" class=" py-2 px-3 flex text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+				  </li>
+				  <li>
+					<a href="#" class="py-2 px-3 flex text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+				  </li>
+				  <li>
+					<a href="#" class=" py-2 px-3 flex text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+				  </li>
+				  <li>
+					<a href="#" class="py-2 px-3 flex text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+				  </li>
+				  <li>
+					<a href="#" class="py-2 px-3 flex text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+		</div>
   
-		<div class="hidden md:block">
-		  <nav aria-label="Global">
-			<ul class="flex items-center gap-6 text-sm ">
+		<!-- <div class=" w-full md:block md:w-auto">
+			<nav aria-label="Global">
+				<ul class="flex items-center gap-6 text-sm ">
 
-				<li class="relative">
-					
-					<HeaderLink
-					  href="/guias"
-					  class="text-gray-500 transition hover:text-gray-500/75 text-xl"
-					>
-					  Guías
-					</HeaderLink>
-				
-					<button 
-						id="menu-button2"
-						class="h-full p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700">
-					  <span class="sr-only">Menu</span>
-					  <svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-4 w-4"
-						viewBox="0 0 20 20"
-						fill="currentColor"
-					  >
-						<path
-						  fill-rule="evenodd"
-						  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-						  clip-rule="evenodd"
-						/>
-					  </svg>
-					</button>
-				
-				  <div
-					id="menu-open2"
-					class="hidden absolute end-0 z-10 w-56 rounded-md border border-gray-100 bg-white shadow-lg"
-					role="menu"
-				  >
-					<div class="px-2">
-					  <a
-						href="#"
-						class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-						role="menuitem"
-					  >
-						Guía 1
-					  </a>
-				
-					  <a
-						href="#"
-						class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-						role="menuitem"
-					  >
-					  	Guía 2
-					  </a>
-				
-					  <a
-						href="#"
-						class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-						role="menuitem"
-					  >
-					  	Guía 3
-					  </a>
-				
-					  <a
-						href="#"
-						class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-						role="menuitem"
-					  >
-					  	Guía 4
-					  </a>
-				
-					</div>
-				  </div>
-			  </li>
-
-				<li class="relative">
-					
-					  <HeaderLink
-						href="#"
+					<li class="relative">
+						
+						<HeaderLink
+						href="/guias"
 						class="text-gray-500 transition hover:text-gray-500/75 text-xl"
-					  >
-						Consejos
-					  </HeaderLink>
-				  
-					  <button 
-					  		id="menu-button1"
-					  		class="h-full p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700">
+						>
+						Guías
+						</HeaderLink>
+					
+						<button 
+							id="menu-button2"
+							class="h-full p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700">
 						<span class="sr-only">Menu</span>
 						<svg
-						  xmlns="http://www.w3.org/2000/svg"
-						  class="h-4 w-4"
-						  viewBox="0 0 20 20"
-						  fill="currentColor"
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-4 w-4"
+							viewBox="0 0 20 20"
+							fill="currentColor"
 						>
-						  <path
+							<path
 							fill-rule="evenodd"
 							d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
 							clip-rule="evenodd"
-						  />
+							/>
 						</svg>
-					  </button>
-				   
+						</button>
+					
 					<div
-						id="menu-open1"
-					 	
-					  class="hidden absolute end-0 z-10 w-56 rounded-md border border-gray-100 bg-white shadow-lg"
-					  role="menu"
+						id="menu-open2"
+						class="hidden absolute end-0 z-10 w-56 rounded-md border border-gray-100 bg-white shadow-lg"
+						role="menu"
 					>
-					  <div class="px-2">
+						<div class="px-2 font-semibold">
 						<a
-						  href="#"
-						  class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-						  role="menuitem"
+							href="/blog/que-regalo-puedo-regalar-a-mis-hijos/"
+							class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+							role="menuitem"
 						>
-						  Consejo 1
+						¿Qué regalo puedo dar a mis hijos?
 						</a>
-				  
+					
 						<a
-						  href="#"
-						  class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-						  role="menuitem"
+							href="#"
+							class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+							role="menuitem"
 						>
-						Consejo 2
+							Guía 2
 						</a>
-				  
+					
 						<a
-						  href="#"
-						  class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-						  role="menuitem"
+							href="#"
+							class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+							role="menuitem"
 						>
-						Consejo 3
+							Guía 3
 						</a>
-				  
+					
 						<a
-						  href="#"
-						  class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-						  role="menuitem"
+							href="#"
+							class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+							role="menuitem"
 						>
-						Consejo 4
+							Guía 4
 						</a>
-				  
+					
 						</div>
 					</div>
 				</li>
 
-				<li>
-					<HeaderLink class="text-gray-500 transition hover:text-gray-500/75 text-xl" href="/blog"> Blog </HeaderLink>
-				</li>
+					<li class="relative">
+						
+						<HeaderLink
+							href="/consejos"
+							class="text-gray-500 transition hover:text-gray-500/75 text-xl"
+						>
+							Consejos
+						</HeaderLink>
+					
+						<button 
+								id="menu-button1"
+								class="h-full p-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700">
+							<span class="sr-only">Menu</span>
+							<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-4 w-4"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							>
+							<path
+								fill-rule="evenodd"
+								d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+								clip-rule="evenodd"
+							/>
+							</svg>
+						</button>
+					
+						<div
+							id="menu-open1"
+							
+						class="hidden absolute end-0 z-10 w-56 rounded-md border border-gray-100 bg-white shadow-lg"
+						role="menu"
+						>
+						<div class="px-2 font-semibold">
+							<a
+							href="#"
+							class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+							role="menuitem"
+							>
+							Consejo 1
+							</a>
+					
+							<a
+							href="#"
+							class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+							role="menuitem"
+							>
+							Consejo 2
+							</a>
+					
+							<a
+							href="#"
+							class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+							role="menuitem"
+							>
+							Consejo 3
+							</a>
+					
+							<a
+							href="#"
+							class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+							role="menuitem"
+							>
+							Consejo 4
+							</a>
+					
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<HeaderLink class="text-gray-500 transition hover:text-gray-500/75 text-xl" href="/blog"> Blog </HeaderLink>
+					</li>
+		
+					<li>
+						<HeaderLink class="text-gray-500 transition hover:text-gray-500/75 text-xl" href="/faq"> FAQ </HeaderLink>
+					</li>
 	
-				<li>
-					<HeaderLink class="text-gray-500 transition hover:text-gray-500/75 text-xl" href="/faq"> FAQ </HeaderLink>
-				</li>
-  
-			</ul>
-		  </nav>
+				</ul>
+			</nav>
 
 			
-		</div>
-		<div class="flex items-center gap-4">
-	
-			<button
-			id="menu-button3"
-			class="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
-			>
-			<span class="sr-only">Toggle menu</span>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				class="h-5 w-5"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke="currentColor"
-				stroke-width="2"
-			>
-				<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-			</svg>
-			</button>
-				<div id="menu-open3">
-						<div class="grid h-full justify-between border-e">
-							
-						</div>
-				</div>
-		</div>
+			</div> -->
 		</div>
 	  </div>
 	</div>
@@ -260,7 +272,7 @@ import HeaderLink from './HeaderLink.astro';
 	}
 </style>
 <script>
-	const button1 = document.querySelector('#menu-button1') as Element;
+	/* const button1 = document.querySelector('#menu-button1') as Element;
 	const menuOpen1 = document.querySelector("#menu-open1") as Element;
 
 	button1.addEventListener("click", () => {
@@ -272,7 +284,7 @@ import HeaderLink from './HeaderLink.astro';
 
 	button2.addEventListener("click", () => {
 		menuOpen2.classList.toggle("hidden");
-	})
+	}) */
 
 	const buttonMenu = document.querySelector('#menu-button3') as Element;
 	const menuOpenToggle = document.querySelector("#menu-open3") as Element;

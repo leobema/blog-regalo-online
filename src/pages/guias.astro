@@ -1,0 +1,80 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Blog1 from '../components/ArticulosPrincipales/Blog1.astro' 
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<!-- Google tag (gtag.js) -->
+		<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-FHBHMMSZ67"></script>
+		<script type="text/partytown">
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-FHBHMMSZ67');
+		</script>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1 class="text-center text-5xl font-semibold">Guías para los regalar a esa persona especial</h1>
+			<h2 class="text-center text-2xl">Descubre Regalos Únicos y Originales para Pareja, Hijos, Amigos y Familiares</h2>
+
+			
+
+			<div class="grid lg:grid-cols-3 md:grid-cols-2 md:mx-3 grid-cols-1 gap-5 mt-10 " >
+
+					<Blog1 
+					title="¿Por qué las mujeres escogen corset color negro?"
+					image="../corset-negro-1.jpg"
+					description='El corset ha sido una prenda icónica que ha...'
+					href='/blog/por-que-las-mujeres-escogen-corset-color-negro/'
+					/>
+
+					<Blog1 
+					title="Top 10 mejores tiendas que venden corset en argentina"
+					image="../corset-lola-ortega-argentina.jpg"
+					description='Explorando la Excelencia en la Corsetería Argentina...'
+					href='/blog/top-10-mejores-tiendas-que-venden-corset-en-argentina/'
+					/>
+					
+					<Blog1 
+					title="10 Ideas Creativas de Regalos para Sorprender a tu Pareja en Cualquier Ocasión"
+					image="../sorprende-a-tu-pareja-post-4.jpg"
+					description='Cuando se trata de sorprender a tu pareja, a veces los regalos...'
+					href='/blog/10-ideas-creativas-de-regalos-para-sorprender-a-tu-pareja-en-cualquier-ocasion/'
+					/>
+					
+					<Blog1 
+					title="10 Regalos Creativos para Sorprender a tu Pareja en Cualquier Ocasión"
+					image="../sorprende-a-tu-pareja.jpg"
+					description='La magia de regalar a tu pareja radica en encontrar ese detalle especial que...'
+					href='/blog/10-regalos-creativos-para-sorprender-a-tu-pareja-en-cualquier-ocasion/'
+					/>
+					
+					<Blog1 
+					title="Almohadones con Frases Motivacionales: Inspiración y Comodidad para tu Hogar"
+					image="../almohadas-frases-movivacion-1.jpg"
+					description='En el mundo acelerado y a menudo estresante en el que vivimos...'
+					href='/blog/almohadones-con-frases-motivacionales-inspiracion-y-comodidad-para-tu-hogar/'
+					/>
+					
+					<Blog1 
+					title="Remeras Personalizadas para Hombres: El Regalo Perfecto para Cualquier Ocasión"
+					image="../remeras-personalizadas-hombres-post.jpg"
+					description='¿Estás buscando un regalo único y significativo para ese hombre especial...'
+					href='/blog/remeras-personalizadas-para-hombres-el-regalo-perfecto-para-cualquier-ocasion/'
+					/>
+						
+			</div>
+
+		</main>
+		<Footer />
+	</body>
+</html>

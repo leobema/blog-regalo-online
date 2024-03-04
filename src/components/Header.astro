@@ -37,47 +37,24 @@ import HeaderLink from './HeaderLink.astro';
 				</svg>
 		  </a>
 		</div>
-		<div >
-		<nav class="bg-white border-gray-200 dark:bg-gray-900">
+		<div>
+		<nav class=" bg-white border-gray-200 dark:bg-gray-900">
 			<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
 			  <button 
-			  		data-collapse-toggle="navbar-default" type="button"
+					type="button"	
 			  		id="menu-button3"
-			  	    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+			  	    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+					>
 				  <span class="sr-only">Open main menu</span>
 				  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
 					  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
 				  </svg>
-			  </button>
+				</button>
 			  <div 
 			  	 id="menu-open3"
-			 	 class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right md:mt-20 -inset-y-20  md:block md:w-auto">
+			 	 class="hidden absolute right-0  mt-[3.5rem] w-48 origin-top-right md:mt-[4.2rem] md:mr-[7rem] -inset-y-20   md:block md:w-auto">
 				<ul class="font-medium mt-20 flex flex-col p-4 md:p-0 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-				  <li>
-					<a href="#" class=" py-2 px-3 flex text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-				  </li>
-				  <li>
-					<a href="#" class="py-2 px-3 flex text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-				  </li>
-				  <li>
-					<a href="#" class=" py-2 px-3 flex text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-				  </li>
-				  <li>
-					<a href="#" class="py-2 px-3 flex text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-				  </li>
-				  <li>
-					<a href="#" class="py-2 px-3 flex text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-		  </nav>
-		</div>
-  
-		<!-- <div class=" w-full md:block md:w-auto">
-			<nav aria-label="Global">
-				<ul class="flex items-center gap-6 text-sm ">
-
+					
 					<li class="relative">
 						
 						<HeaderLink
@@ -146,7 +123,7 @@ import HeaderLink from './HeaderLink.astro';
 						</div>
 					</div>
 				</li>
-
+					
 					<li class="relative">
 						
 						<HeaderLink
@@ -216,7 +193,7 @@ import HeaderLink from './HeaderLink.astro';
 							</div>
 						</div>
 					</li>
-
+					
 					<li>
 						<HeaderLink class="text-gray-500 transition hover:text-gray-500/75 text-xl" href="/blog"> Blog </HeaderLink>
 					</li>
@@ -224,12 +201,13 @@ import HeaderLink from './HeaderLink.astro';
 					<li>
 						<HeaderLink class="text-gray-500 transition hover:text-gray-500/75 text-xl" href="/faq"> FAQ </HeaderLink>
 					</li>
-	
+				  
 				</ul>
-			</nav>
-
-			
-			</div> -->
+			  </div>
+			</div>
+		  </nav>
+		</div>
+  
 		</div>
 	  </div>
 	</div>
@@ -272,7 +250,7 @@ import HeaderLink from './HeaderLink.astro';
 	}
 </style>
 <script>
-	/* const button1 = document.querySelector('#menu-button1') as Element;
+	const button1 = document.querySelector('#menu-button1') as Element;
 	const menuOpen1 = document.querySelector("#menu-open1") as Element;
 
 	button1.addEventListener("click", () => {
@@ -284,19 +262,14 @@ import HeaderLink from './HeaderLink.astro';
 
 	button2.addEventListener("click", () => {
 		menuOpen2.classList.toggle("hidden");
-	}) */
+	}) 
 
 	const buttonMenu = document.querySelector('#menu-button3') as Element;
 	const menuOpenToggle = document.querySelector("#menu-open3") as Element;
 
 	buttonMenu.addEventListener("click", () => {
-		menuOpenToggle.classList.toggle("hidden");
+	menuOpenToggle.classList.toggle("hidden")	
 	})
-
-
-
-
-
 
 </script>
 
